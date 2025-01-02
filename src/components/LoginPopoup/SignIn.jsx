@@ -2,8 +2,8 @@ import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash, FaLinkedinIn } from "react-icons/fa";
 
-const SignIn = (handleSignIn) => {
-    const [showPassword, setShowPassword] = React.useState(false);
+const SignIn = ({handleSignIn}) => {
+  const [showPassword, setShowPassword] = React.useState(false);
   return (
     <>
       <div className="p-6">
@@ -77,9 +77,11 @@ const SignIn = (handleSignIn) => {
         <p
           className="text-center text-white text-sm my-3
         hover:text-lime-200 cursor-pointer text-shadow"
-          onClick={() => handleSignIn()}
         >
-          Already Have an Account? Login
+          <button onClick={handleSignIn}>
+            {" "}
+            Already Have an Account? Login
+          </button>
         </p>
       </div>
     </>

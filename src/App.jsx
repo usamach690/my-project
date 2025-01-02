@@ -12,7 +12,7 @@ const bgImage = {
   backgroundPosition: "center",
 };
 const App = () => {
-  const [loginPopup, setLoginPopup] = React.useState(false);
+  const [loginPopup, setLoginPopup] = React.useState(true);
 
   const toggleLoginPopup = () => {
     setLoginPopup(!loginPopup);
